@@ -5,7 +5,8 @@
   "main": "main.js",
   "scripts": {
     "test": "echo \"Everything is OK\"",
-    "prepare": "husky install"
+    "prepare": "husky install",
+    "fix": "eslint --fix ."
   },
   "keywords": [
     "nodejs",
@@ -15,6 +16,11 @@
   "author": "Maksym Shenderuk <jaood96@gmail.com>",
   "license": "MIT",
   "devDependencies": {
+    "eslint": "^8.44.0",
+    "eslint-config-metarhia": "^8.1.0",
+    "eslint-config-prettier": "^8.8.0",
+    "eslint-plugin-import": "^2.27.5",
+    "eslint-plugin-prettier": "^4.2.1",
     "husky": "^8.0.0"
   }
 }
