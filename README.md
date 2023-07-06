@@ -1,1 +1,19 @@
 # Node.JS server template
+
+Main idea behind this project is to build template for simple, flexible and robust Node.JS backend server.
+
+# Goals
+Here will be feature list to implement to reach certain version
+## To v0.0.1
+
+- [x] Add `infra` folder for future infrastructure elements.
+- [x] Add `lib` folder for core helper modules.
+- [x] Add `schemas` folder for user-defined data schemas.
+- [x] Add `services` folder with nested `api`, `internal` and `external` folders
+- [x] Implement `event bus` with `Publish/Subscribe` (pub/sub) and `Command` pattern interfaces.
+- [ ] Implement `http` server based on [`fastify`](https://www.npmjs.com/package/fastify) npm module.
+- [ ] Implement custom module loader with optional `DI`.
+- [ ] Add services autoload.
+  - [ ] `api` should contain services available via `http` and `event bus`.
+  - [ ] `internal` should contain services available only via `event bus`.
+  - [ ] `external` should contain definitions for external api calls.
