@@ -11,7 +11,8 @@ Here will be feature list to implement to reach certain version
 - [x] Add `schemas` folder for user-defined data schemas.
 - [x] Add `services` folder with nested `api`, `internal` and `external` folders
 - [x] Implement `event bus` with `Publish/Subscribe` (pub/sub) and `Command` pattern interfaces.
-- [ ] Implement `http` server based on [`fastify`](https://www.npmjs.com/package/fastify) npm module.
+~~- [ ] Implement `http` server based on [`fastify`](https://www.npmjs.com/package/fastify) npm module.~~
+- [ ] Implement `http` interface with pluggable HTTP server.
 - [ ] Implement custom module loader with optional `DI`.
 - [ ] Add services autoload.
   - [ ] `api` should contain services available via `http` and `event bus`.
