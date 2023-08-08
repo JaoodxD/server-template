@@ -3,7 +3,7 @@
 Main idea behind this project is to build template for simple, flexible and robust Node.JS backend server.
 
 # Goals
-Here will be feature list to implement to reach certain version
+Here will be features list to implement to reach certain version
 ## To v0.0.1
 
 - [x] Add `infra` folder for future infrastructure elements.
