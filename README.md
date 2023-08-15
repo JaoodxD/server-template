@@ -19,5 +19,6 @@ Here will be features list to implement to reach certain version
   - [ ] `internal` should contain services available only via `event bus`.
   - [ ] `external` should contain definitions for external api calls.
 
-## To v0.0.2
+## Features for future
 - [ ] Add optional [`ajv`](https://ajv.js.org/) schema validator to `api` incoming `payload` and returning `result`.
+- [ ] Add cli util to generate `d.ts` for `services`.
