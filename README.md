@@ -22,3 +22,4 @@ Here will be features list to implement to reach certain version
 ## Features for future
 - [ ] Add optional [`ajv`](https://ajv.js.org/) schema validator to `api` incoming `payload` and returning `result`.
 - [ ] Add cli util to generate `d.ts` for `services`.
+- [ ] hot reload of an individual module.
