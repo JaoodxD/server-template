@@ -23,3 +23,4 @@ Here will be features list to implement to reach certain version
 - [ ] Add optional [`ajv`](https://ajv.js.org/) schema validator to `api` incoming `payload` and returning `result`.
 - [ ] Add cli util to generate `d.ts` for `services`.
 - [ ] hot reload of an individual module.
+- [ ] Optional mixin of user metadata (session info, access control, etc.)
