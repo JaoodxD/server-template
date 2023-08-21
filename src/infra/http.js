@@ -26,6 +26,9 @@ module.exports = (config = {}) => {
 
   const server = new http.createServer(serveRequest);
   server.listen(PORT);
+  server.on('error', (error) => {
+    if (error) logger.error(error);
+  });
   logger.info(`http server start on http://127.0.0.1:${PORT}`);
 
   return () => server.close();
