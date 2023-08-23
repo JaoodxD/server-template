@@ -20,9 +20,9 @@ const load = async (filePath, sandbox) => {
   const context = vm.createContext(Object.freeze({ ...sandbox }));
   const exported = script.runInContext(context, OPTIONS);
   if (typeof exported === 'object') {
-    const map = new Map();
+    const map = {};
     for (const [key, value] of Object.entries(exported)) {
-      map.set(key, value);
+      map[key] = value;
     }
     return map;
   }
@@ -31,7 +31,7 @@ const load = async (filePath, sandbox) => {
 
 const loadDir = async (folderPath, sandbox) => {
   const files = await fsp.readdir(folderPath, { withFileTypes: true });
-  const container = new Map();
+  const container = {};
   for (const file of files) {
     const { name } = file;
     if (file.isFile() && !name.endsWith('.js')) continue;
@@ -39,11 +39,11 @@ const loadDir = async (folderPath, sandbox) => {
     const key = path.basename(name, '.js');
     const loader = file.isFile() ? load : loadDir;
     const exported = await loader(location, sandbox);
-    if (exported.constructor.name === 'Map') {
-      for (const [methodName, method] of exported) {
-        container.set(`${key}/${methodName}`, method);
-      }
-    } else container.set(key, exported);
+    if (exported.constructor.name === 'Object') {
+      for (const [methodName, method] of Object.entries(exported)) {
+        container[`${key}/${methodName}`] = method;
+      }     
+    } else container[key] = exported;
   }
   return container;
 };
