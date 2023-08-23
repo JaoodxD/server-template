@@ -13,7 +13,7 @@ Here will be features list to implement to reach certain version
 - [x] Implement `event bus` with `Publish/Subscribe` (pub/sub) and `Command` pattern interfaces.  
 ~~- [ ] Implement `http` server based on [`fastify`](https://www.npmjs.com/package/fastify) npm module.~~
 - [x] Implement `http` interface with pluggable HTTP server.
-- [ ] Implement custom module loader with optional `DI`.
+- [x] Implement custom module loader with optional `DI`.
 - [ ] Add services autoload.
   - [ ] `api` should contain services available via `http` and `event bus`.
   - [ ] `internal` should contain services available only via `event bus`.
